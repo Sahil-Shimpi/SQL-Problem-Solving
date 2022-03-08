@@ -4,5 +4,8 @@ SELECT name FROM Salesperson sp
 WHERE
 sp.sales_id 
 NOT IN 
-(SELECT o.sales_id FROM Orders o
-WHERE o.com_id = 1)
+(
+  SELECT o.sales_id 
+  FROM Orders o
+  WHERE o.com_id = 1
+)
